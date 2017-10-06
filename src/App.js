@@ -73,27 +73,33 @@ handleDeleteProject(id){
               </div>
                 <div className="row">
                  <h2 className="text-primary"> Set Timer</h2>
-                <div className="form-group">
-                  <div className="col-sm-3">
-                    <label htmlFor="hours">Hours </label>
+                <div className="row">
+                  <div className="form-group">
+                    <div className="col-sm-3">
+                      <label htmlFor="hours">Hours </label>
+                    </div>
+                    <div className="col-sm-9">
+                    <input id="hours" className="form-control" type="number"/>
+                    </div>
                   </div>
-                  <div className="col-sm-9">
-                  <input id="hours" className="form-control" type="number"/>
                   </div>
-                </div>
-                <div className="form-group">
-                  <div className="col-sm-3">
-                    <label htmlFor="minutes"> Minutes </label>
+                  <div className="row">
+                  <div className="form-group">
+                    <div className="col-sm-3">
+                      <label htmlFor="minutes"> Minutes </label>
+                    </div>
+                    <div className="col-sm-9">
+                    <input id="hours" className="form-control" type="number"/>
+                    </div>
                   </div>
-                  <div className="col-sm-9">
-                  <input id="hours" className="form-control" type="number"/>
-                  </div>
-                </div><div className="form-group">
-                  <div className="col-sm-3">
-                    <label htmlFor="seconds"> Seconds </label>
-                  </div>
-                  <div className="col-sm-9">
-                  <input id="hours" className="form-control" type="number"/>
+                  <div className="row">
+                    </div><div className="form-group">
+                      <div className="col-sm-3">
+                        <label htmlFor="seconds"> Seconds  </label>
+                      </div>
+                      <div className="col-sm-9">
+                      <input id="hours" className="form-control" type="number"/>
+                      </div>
                   </div>
                 </div>
               </div>
