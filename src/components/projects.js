@@ -22,7 +22,7 @@ class Projects extends Component {
       
     return (
       <div className="Projects">
-       <h3> Latest Projects </h3>
+       <h3> Today's goals </h3>
        {projectItems}
       </div>
     );

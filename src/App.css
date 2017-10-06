@@ -3,3 +3,21 @@ body {
   background-color: skyblue;
   text-align: center;
 }
+
+
+.content{
+
+width: 600px;
+padding: 40px;
+
+}
+
+
+@media (max-width:60px) {
+
+  .content {
+
+    margin: 20px 20px 0px;
+    width: auto;  
+  }
+}

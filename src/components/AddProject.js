@@ -16,7 +16,7 @@ constructor() {
 
 
     static defaultProps = {
-        categories: ["Web Design", 'Web Development', "Mobile Development"]
+        categories: [ 'Web Development', "General"]
     }
   
     handleSubmit(e){
@@ -48,7 +48,7 @@ constructor() {
 
     return (
       <div>
-       <h3> Add Project </h3>
+       <h3> Add Task </h3>
        <form onSubmit={this.handleSubmit.bind(this)}>
            <div>
                <label> Title </label><br />

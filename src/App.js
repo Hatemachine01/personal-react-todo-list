@@ -59,9 +59,19 @@ handleDeleteProject(id){
       <div className="App">
      
    
-      <AddProject  AddProject={this.handleAddProject.bind(this)} />
-      <Projects projects={this.state.projects} onDelete={this.handleDeleteProject.bind(this)} />
+        <AddProject  AddProject={this.handleAddProject.bind(this)} />
+        <Projects projects={this.state.projects} onDelete={this.handleDeleteProject.bind(this)} />
+      <br/>
+      <div class="panel panel-default content center-block">
+          <div class="panel-body">
+              <div className="Cotainer-fluid">
+                <div className="row">
+                  <h2 className="text-center"> Pomodoro Power! </h2>
+                </div>
+            </div>
+          </div>
       </div>
+    </div>
     );
   }
 }
