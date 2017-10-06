@@ -61,13 +61,42 @@ handleDeleteProject(id){
    
         <AddProject  AddProject={this.handleAddProject.bind(this)} />
         <Projects projects={this.state.projects} onDelete={this.handleDeleteProject.bind(this)} />
-      <br/>
+      <br/ >
       <div class="panel panel-default content center-block">
           <div class="panel-body">
               <div className="Cotainer-fluid">
                 <div className="row">
                   <h2 className="text-center"> Pomodoro Power! </h2>
                 </div>
+              <div className="row">
+                <h2 className="text-center"> 00:00:00 </h2>
+              </div>
+                <div className="row">
+                 <h2 className="text-primary"> Set Timer</h2>
+                <div className="form-group">
+                  <div className="col-sm-3">
+                    <label htmlFor="hours">Hours </label>
+                  </div>
+                  <div className="col-sm-9">
+                  <input id="hours" className="form-control" type="number"/>
+                  </div>
+                </div>
+                <div className="form-group">
+                  <div className="col-sm-3">
+                    <label htmlFor="minutes"> Minutes </label>
+                  </div>
+                  <div className="col-sm-9">
+                  <input id="hours" className="form-control" type="number"/>
+                  </div>
+                </div><div className="form-group">
+                  <div className="col-sm-3">
+                    <label htmlFor="seconds"> Seconds </label>
+                  </div>
+                  <div className="col-sm-9">
+                  <input id="hours" className="form-control" type="number"/>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
       </div>
