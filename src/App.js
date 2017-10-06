@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Projects from "./components/projects";
 import AddProject from "./components/AddProject";
 import uuid from "uuid";
+import Timer from "./Timer/components/Timer";
 import './App.css';
 
 class App extends Component {
@@ -14,10 +15,6 @@ class App extends Component {
     }
   }
  
- 
-
-
-
 componentWillMount(){
   this.setState({projects:[
   {  
@@ -63,48 +60,8 @@ handleDeleteProject(id){
         <Projects projects={this.state.projects} onDelete={this.handleDeleteProject.bind(this)} />
       <br/ >
       <div class="panel panel-default content center-block">
-          <div class="panel-body">
-              <div className="Cotainer-fluid">
-                <div className="row">
-                  <h2 className="text-center"> Pomodoro Power! </h2>
-                </div>
-              <div className="row">
-                <h2 className="text-center"> 00:00:00 </h2>
-              </div>
-                <div className="row">
-                 <h2 className="text-primary"> Set Timer</h2>
-                <div className="row">
-                  <div className="form-group">
-                    <div className="col-sm-3">
-                      <label htmlFor="hours">Hours </label>
-                    </div>
-                    <div className="col-sm-9">
-                    <input id="hours" className="form-control" type="number"/>
-                    </div>
-                  </div>
-                  </div>
-                  <div className="row">
-                  <div className="form-group">
-                    <div className="col-sm-3">
-                      <label htmlFor="minutes"> Minutes </label>
-                    </div>
-                    <div className="col-sm-9">
-                    <input id="hours" className="form-control" type="number"/>
-                    </div>
-                  </div>
-                  <div className="row">
-                    </div><div className="form-group">
-                      <div className="col-sm-3">
-                        <label htmlFor="seconds"> Seconds  </label>
-                      </div>
-                      <div className="col-sm-9">
-                      <input id="hours" className="form-control" type="number"/>
-                      </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          <div class="panel-body"></div>
+            <Timer />
       </div>
     </div>
     );
