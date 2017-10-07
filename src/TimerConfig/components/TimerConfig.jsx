@@ -12,12 +12,16 @@ constructor() {
     }
 
 handleChange(event) {
-    const newBaseTime = moment.durantion(0);
-        if (event.target.id === 'hours') newBaseTime.add(event.target.value, 'hours');
-        if (event.target.id === 'minutes')newBaseTime.add(event.target.value, 'minutes');
-        if (event.target.id === 'seconds')newBaseTime.add(event.target.value, 'seconds');
+    const newBaseTime = this.props.BaseTime
+        if (event.target.id === 'hours') newBaseTime.subtract(newBaseTime.get('hours', 'hours')).add(parseInt(event.target.value, 10), 'hours');
+        if (event.target.id === 'minutes') newBaseTime.subtract(newBaseTime.get('minutes','minutes')).add(parseInt(event.target.value, 10), 'minutes');
+        if (event.target.id === 'seconds') newBaseTime.subtract(newBaseTime.get('seconds', 'seconds')).add(parseInt(event.target.value, 10),'seconds');
 
-}
+    this.props.setBaseTime(newBaseTime);
+ 
+
+
+    }
 render() {
     return (
     
@@ -29,7 +33,11 @@ render() {
                       <label htmlFor="hours">Hours </label>
                     </div>
                     <div className="col-sm-9">
-                    <input id="hours" className="form-control" type="number" defaultValue={this.props.BaseTime.get('hours')}/>
+                    <input id="hours" 
+                    className="form-control"
+                    type="number" defaultValue={this.props.BaseTime.get('hours')}
+                    onChange={this.handleChange}
+                     />
                     </div>
                   </div>
                   </div>
@@ -39,7 +47,11 @@ render() {
                       <label htmlFor="minutes"> Minutes </label>
                     </div>
                     <div className="col-sm-9">
-                    <input id="minutes" className="form-control" type="number" defaultValue={this.props.BaseTime.get('minutes')}/>
+                    <input id="minutes"
+                     className="form-control"
+                     type="number" defaultValue={this.props.BaseTime.get('minutes')}
+                     onChange={this.handleChange}
+                      />
                     </div>
                   </div>
                   <div className="row control-row">
@@ -48,7 +60,12 @@ render() {
                         <label htmlFor="seconds"> Seconds  </label>
                       </div>
                       <div className="col-sm-9">
-                      <input id="seconds" className="form-control" type="number" defaultValue={this.props.BaseTime.get('seconds')}/>
+                      <input id="seconds" 
+                      className="form-control" 
+                      type="number" 
+                      defaultValue={this.props.BaseTime.get('seconds')}
+                      onChange={this.handleChange}
+                      />
                       </div>
                   </div>
                 </div>
