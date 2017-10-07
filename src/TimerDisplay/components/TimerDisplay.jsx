@@ -1,10 +1,18 @@
 import React from "react";
 
+const leftPad = (val) => {
+ 
+    if (val < 10) return `0${val}`;
 
-const Display = () => (
+        return `${val}`;
+
+}
+
+const Display = (props) => (
 
 <div className="row">
-    <h2 className="text-center"> 00:00:00 </h2>
+    <h2 className="text-center">   
+    { `${leftPad(props.currentTime.get('hours'))}:${leftPad(props.currentTime.get('minutes'))}:${leftPad(props.currentTime.get('seconds')) }` } </h2>
 </div>
 
 );
