@@ -12,10 +12,21 @@ constructor() {
 
     this.state = {
         currentTime: moment.duration(25, "minutes"),
-        baseTime: moment.duration(25, "minutes"),
+        BaseTime: moment.duration(25, "minutes"),
     };
+
+this.setBaseTime = this.setBaseTime.bind(this); 
+
 }
 
+
+
+
+setBaseTime(NewBaseTime){
+    this.setState({
+        BaseTime: NewBaseTime
+    });
+}
 
 render()
 {
@@ -24,7 +35,10 @@ return(
   <Header />
   <Display currentTime= {this.state.currentTime } />
   <TimerButton  />
-  <TimerConfig baseTime={this.state.baseTime} />
+  <TimerConfig  
+    BaseTime={this.state.BaseTime}
+    setBaseTime= {this.setBaseTime}
+    />
 </div>
     );
 }
